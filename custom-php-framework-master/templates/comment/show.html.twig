@@ -1,0 +1,7 @@
+{# templates/comment/show.html.twig #}
+
+<div>
+    <strong>Comment #{{ comment.id }}</strong>
+    <p>{{ comment.content }}</p>
+    <a href="{{ path('comment_index', {'postId': comment.postId}) }}">Back to list</a>
+</div>

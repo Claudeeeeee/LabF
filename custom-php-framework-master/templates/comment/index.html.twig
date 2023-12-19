@@ -1,0 +1,11 @@
+{# templates/comment/index.html.twig #}
+
+{% for comment in comments %}
+    <div>
+        <strong>Comment #{{ comment.id }}</strong>
+        <p>{{ comment.content }}</p>
+        <a href="{{ path('comment_show', {'id': comment.id}) }}">Show</a>
+        <a href="{{ path('comment_edit', {'id': comment.id}) }}">Edit</a>
+        <a href="{{ path('comment_delete', {'id': comment.id}) }}" onclick="return confirm('Are you sure?')">Delete</a>
+    </div>
+{% endfor %}
